@@ -1,9 +1,11 @@
 import 'package:basket_app/basket_app.dart';
+import 'package:calculator_app/calculat.dart';
 import 'package:flutter/material.dart';
 import 'package:lighter_app/lighter.dart';
 import 'package:workshop/core/routes/routes_name.dart';
 import 'package:workshop/pages/home_screen.dart';
 import 'package:workshop/pages/splash_screen.dart';
+import 'package:xo_app/xo_app.dart';
 
 class AppRoute {
   static Route<dynamic> generate(RouteSettings? settings) {
@@ -22,12 +24,21 @@ class AppRoute {
         });
       case RoutesName.basketApp:
         return MaterialPageRoute(builder: (_) {
-          return const BasketAppScreen();
+          return const Basketball();
         });
       case RoutesName.calculatorApp:
         return MaterialPageRoute(builder: (_) {
-          return const BasketAppScreen();
+          return const calculate();
         });
+      case RoutesName.xo:
+        return MaterialPageRoute(builder: (_) {
+          return const XoApp();
+        });
+
+
+
+
+
       default:
         throw Exception('Route not found!');
     }

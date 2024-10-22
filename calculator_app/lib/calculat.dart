@@ -89,14 +89,10 @@ class _calculateState extends State<calculate> {
                   return InkWell(
                     onTap: () {
                       setState(() {
-
-
                         if (num[index] == 'c') {
                           input = "";
                           output = '';
-                        }
-                        
-                         else if (num[index] == 'DEL') {
+                        } else if (num[index] == 'DEL') {
                           input = input.substring(0, input.length - 1);
                         } else if (num[index] == '*' ||
                             num[index] == '-' ||
@@ -116,16 +112,12 @@ class _calculateState extends State<calculate> {
                         setState(() {
                           output = result.toString();
                         });
-                      }
-                    else  {
+                      } else {
                         setState(() {
                           input += num[index];
                         });
                       } 
                         }
-
-
-                        
                       });
                     },
                     child: Container(

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:workshop/core/constants/colors.dart';
+import 'package:workshop/core/routes/routes_name.dart';
+import 'package:workshop/widgets/starter_app_item.dart';
 
 class HomeScreen extends StatelessWidget {
+  
   const HomeScreen({super.key});
 
   @override
@@ -19,11 +22,11 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          //! Remove the comment then add arguments 
-          // StarterAppItem(),
-          // StarterAppItem(),
-          // StarterAppItem(),
-          // StarterAppItem(),
+          StarterAppItem( routesname: RoutesName.basketApp, titel: 'basketballApp'),
+          StarterAppItem( routesname: RoutesName.xo, titel: 'xoApp'),
+          StarterAppItem( routesname: RoutesName.calculatorApp, titel: 'calculatorApp'),
+          StarterAppItem( routesname: RoutesName.lighterApp, titel: 'lighterApp')
+        
         ],
       ),
       )),
